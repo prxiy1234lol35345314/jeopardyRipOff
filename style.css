@@ -1,0 +1,85 @@
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+#playerDisplay{
+    text-align: center;
+    background-color:aliceblue;
+    width: 1px;
+    border-radius: 10px;
+    border: 1px solid blue;
+    position: absolute;
+    margin: auto;
+    top: 1;
+    right: 0;
+    bottom: 1;
+    left: 0;
+    transition: 1s;
+    opacity: 0;
+    overflow-y: visible;
+}
+
+table, td {
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px
+  }
+
+  .questionBox{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 1s;
+    background-color: aliceblue;
+    height: 500px;
+    width: 800px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .revealAnswer{
+    height: 100px;
+    width: 500px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(93, 189, 211);
+    font-size: 50px;
+    font-family: "Copperplate", fantasy;
+    cursor: pointer;
+    opacity: 1;
+    transition: 1;
+  }
+
+  .answer{
+    font-size: 50px;
+  }
+
+  .answerBlur{
+    background: rgba(255, 255, 255, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.4px);
+    -webkit-backdrop-filter: blur(13.4px);
+    height: 100px;
+    width: 700px;
+    margin-left: 50px;
+    position: absolute;
+    margin-top: -160px;
+    opacity: 1;
+    transition: 1s;
+    pointer-events: none;
+  }
+
+  .grading{
+    height: 75px;
+    width: 300px;
+    border-radius: 50px;
+    border: none;
+
+    font-size: 50px;
+    cursor: pointer;
+    opacity: 1;
+    transition: 1;
+  }
