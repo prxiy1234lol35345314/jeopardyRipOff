@@ -59,9 +59,11 @@ function checkLeaderboard(){
 
 function question(q, a, t, award, item){
     if(item.disabled==true)return;
+    if(document.body.innerHTML.includes('id="questionBox"'))return;
     var questionBox = document.createElement('div')
     questionBox.classList.add('questionBox')
     document.body.appendChild(questionBox)
+    questionBox.id='questionBox'
 
     var que = document.createElement('h3')
     que.style.fontSize='30px'
@@ -189,3 +191,7 @@ winner.onclick=function(){
       alert('The winner is: '+currentWinner+'! \n'+currentWinner+' won with '+currentWinnerNum+' points!')
 
 }
+
+
+
+
