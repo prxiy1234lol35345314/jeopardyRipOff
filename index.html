@@ -76,11 +76,11 @@
 
 
 
-<div id="userAuth" class="glasseffect">
+<div id="userAuth" class="glasseffect" style="position: absolute;">
  <input id="userInput" placeholder="Player name here"><p></p>
     <button id="addUser" onclick="addNewUser(document.getElementById('userInput').value)">Add to game</button>
     <button id="startGame" onclick="startNewGame()">Start Game</button>
-    <button id="leaderboardBtn" onclick="if(document.getElementById('playerDisplay').style.display=='none'){document.getElementById('playerDisplay').style.display='block'}else{document.getElementById('playerDisplay').style.display='none'};" style="display: none;">Leaderboard</button>
+    <button id="leaderboardBtn" onclick="if(document.getElementById('playerDisplay').style.display=='none'){document.getElementById('playerDisplay').style.display='block';document.getElementById('questionTable').style.display='none'}else{document.getElementById('playerDisplay').style.display='none';document.getElementById('questionTable').style.display='block'};" style="display: none;">Leaderboard</button>
     <button id="winnerBtn">Choose Winner</button>
     <h5 id="activeUser" style="color: white;"></h5>
     <div id="playerDisplay"></div>

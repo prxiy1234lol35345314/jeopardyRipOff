@@ -33,8 +33,8 @@ function addNewUser(playerName){
         
         players.set(playerName, 0);
         //add to leaderboard
-        playerDisplay.style.height = oldHeight+36+'px'
-        oldHeight = oldHeight+36
+        playerDisplay.style.height = oldHeight+20+'px'
+        oldHeight = oldHeight+20
 
         var newPlayerDisplay = document.createElement('p')
         newPlayerDisplay.innerHTML="<p/>"+"<p/>"+"<p/>"+userInput.value+"            :            "+players.get(playerName)
