@@ -37,7 +37,7 @@ function addNewUser(playerName){
         oldHeight = oldHeight+36
 
         var newPlayerDisplay = document.createElement('p')
-        newPlayerDisplay.innerHTML=userInput.value+"            :            "+players.get(playerName)
+        newPlayerDisplay.innerHTML="<p/>"+"<p/>"+"<p/>"+userInput.value+"            :            "+players.get(playerName)
         userInput.value=''
         
         playerCount++;
@@ -88,6 +88,10 @@ function question(q, a, t, award, item){
         answerBlur.style.opacity='0'
         reveal.style.opacity='0'
         reveal.style.display='none'
+        //answer.style.background='transparent'
+        answer.classList.remove('answer')
+        answer.classList.add('answer2')
+        
         setTimeout(() => {
             answerBlur.remove()
         }, 1000);
@@ -95,7 +99,7 @@ function question(q, a, t, award, item){
         correct.style.fontSize='50px'
         correct.innerHTML="Correct"
         correct.classList.add('grading')
-        correct.style.backgroundColor='rgb(93, 189, 211)'
+        correct.style.backgroundColor='rgba(128, 249, 255, 0.55)'
         correct.style.marginRight='10px'
         questionBox.appendChild(correct)
         correct.onclick=function(){
@@ -122,7 +126,7 @@ function question(q, a, t, award, item){
         incorrect.style.fontSize='50px'
         incorrect.innerHTML="Incorrect"
         incorrect.classList.add('grading')
-        incorrect.style.backgroundColor='red'
+        incorrect.style.backgroundColor='rgba(255, 0, 0, 0.55)'
         questionBox.appendChild(incorrect)
         incorrect.onclick=function(){
             incorrect.style.fontSize='20px'
@@ -150,6 +154,7 @@ function startNewGame(){
     playerDisplay.style.display='none'
     document.getElementById('leaderboardBtn').style.display='block'
     questionsTable.style.display='block'
+    document.getElementById('questionTable').style.marginTop='300px'
     userInput.style.display='none'
     addUser.style.display='none'
     winner.style.display='block'
@@ -168,11 +173,8 @@ function startNewGame(){
 
 
 
-var winner=document.createElement('button')
-winner.innerHTML='Choose winners'
-document.body.appendChild(winner)
-winner.style.marginTop='20px'
-winner.style.display='none'
+var winner = document.getElementById('winnerBtn')
+
 
 winner.onclick=function(){
     var currentWinner=''

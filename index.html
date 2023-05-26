@@ -8,17 +8,86 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><img src="img/f482bd_37f427c018a0402793050f6453291df4~mv2.png" title="this image might be copyrighted"></header>
-    <input id="userInput" placeholder="Player name here">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="glowingback">
+  <div class="glowing">
+    
+    <span style="--i:1;"></span>
+    
+    <span style="--i:2;"></span>
+    
+    <span style="--i:3;"></span>
+    
+  </div>
+  
+  <div class="glowing">
+    
+    <span style="--i:1;"></span>
+    
+    <span style="--i:2;"></span>
+    
+    <span style="--i:3;"></span>
+    
+  </div>
+  
+  <div class="glowing">
+    
+    <span style="--i:1;"></span>
+    
+    <span style="--i:2;"></span>
+    
+    <span style="--i:3;"></span>
+    
+  </div>
+  
+  <div class="glowing">
+    
+    <span style="--i:1;"></span>
+    
+    <span style="--i:2;"></span>
+    
+    <span style="--i:3;"></span>
+    
+  </div>
+</div>
+<div class="takeupwholescreen">
+
+</div>
+
+
+<div class="text-container">
+    <h1>CATEGORIES</h1>
+  </div>
+
+
+
+
+<div id="userAuth" class="glasseffect">
+ <input id="userInput" placeholder="Player name here"><p></p>
     <button id="addUser" onclick="addNewUser(document.getElementById('userInput').value)">Add to game</button>
     <button id="startGame" onclick="startNewGame()">Start Game</button>
     <button id="leaderboardBtn" onclick="if(document.getElementById('playerDisplay').style.display=='none'){document.getElementById('playerDisplay').style.display='block'}else{document.getElementById('playerDisplay').style.display='none'};" style="display: none;">Leaderboard</button>
-    <h5 id="activeUser"></h5>
+    <button id="winnerBtn">Choose Winner</button>
+    <h5 id="activeUser" style="color: white;"></h5>
     <div id="playerDisplay"></div>
+</div>
 
-
-
-    <table id="questions" style="text-align: center; display: none;">
+<div id="questionTable">
+    <table id="questions" style="text-align: center; display: none; position: absolute;">
         <tbody>
         <tr id="Categories">
             <td>Iroquois<p></p></td>
@@ -45,7 +114,7 @@
             <td onclick="question('Which ballroom dance was thought to stand for freedom of expression and movement?', 'The Waltz', 'Dance', 1000, this)"><p></p>1000<p></p></td>
             <td onclick="question('What sound does a train make when it eats?', 'CHEW CHEW!', 'Jokes', 1000, this)"><p></p>1000<p></p></td>
             <td onclick="question('How many people are on social media? Guess within 1 Billion', '3.81 Billion, 49% of the world', 'Social Media', 1000, this)"><p></p>1000<p></p></td>
-            <td onclick="question('When was Baby by Justin Biber released?', '2015', 'Music', 1000, this)"><p></p>1000<p></p></td>
+            <td onclick="question('When was Baby by Justin Biber released?', '2010', 'Music', 1000, this)"><p></p>1000<p></p></td>
             <td onclick="question('A piece of paper that you get as a proof when you buy something is called a...', 'Receipt', 'Shopping', 1000, this)"><p></p>1000<p></p></td>
             <td onclick="question('Who made Romeo and Juliet?', 'William Shakespeare', 'Miscellaneous', 1000, this)"><p></p>1000<p></p></td>
         </tr>
@@ -106,7 +175,7 @@
             <td onclick="question('What does palindrome mean in Greek?', 'Running Back Again', 'Miscellaneous', 5000, this)"><p></p>5000<p></p></td>
         </tr>
     </table>
-
+</div>
 
 
     <script src="index.js"></script>
