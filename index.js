@@ -65,6 +65,14 @@ function question(q, a, t, award, item){
     document.body.appendChild(questionBox)
     questionBox.id='questionBox'
 
+    var close = document.createElement('h5')
+    close.classList.add('close')
+    close.innerHTML='X'
+    questionBox.appendChild(close)
+    close.onclick=function(){
+        document.getElementById('questionBox').remove()
+    }
+
     var que = document.createElement('h3')
     que.style.fontSize='30px'
     que.innerHTML="<span style='font-size:15px'>"+document.getElementById('activeUser').innerHTML+" : "+t+" : "+award+"</span><p/>"+q
